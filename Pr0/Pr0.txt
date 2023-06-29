@@ -1,0 +1,25 @@
+@startuml StoreSystem
+skinparam actor {
+  BackgroundColor LightBlue
+}
+
+actor User
+actor Admin
+
+rectangle "Online Store System" {
+  User --> (Browse Products)
+  User --> (Add to Cart)
+  User --> (Checkout)
+
+  Admin --> (Manage Products)
+  Admin --> (Manage Orders)
+
+  (Manage Products) --> (Add Product)
+  (Manage Products) --> (Update Product)
+  (Manage Products) --> (Delete Product)
+
+  (Manage Orders) --> (View Orders)
+  (Manage Orders) --> (Update Order Status)
+}
+
+@enduml
