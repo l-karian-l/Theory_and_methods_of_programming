@@ -1,0 +1,9 @@
+@startuml
+actor User
+participant "Electronic Bulletin Board" as Board
+
+User -> Board: Delete Advertisement
+Board -> Board: Find Advertisement by ID
+Board -> Board: Delete Advertisement Object
+Board --> User: Deletion Confirmation
+@enduml

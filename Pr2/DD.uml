@@ -1,0 +1,13 @@
+@startuml
+node "User's Device" {
+  artifact "Web Browser" as Browser
+}
+
+node "Bulletin Board Server" {
+  artifact "Electronic Bulletin Board" as Board
+  artifact "Database" as Database
+}
+
+Browser --> Board
+Board --> Database
+@enduml

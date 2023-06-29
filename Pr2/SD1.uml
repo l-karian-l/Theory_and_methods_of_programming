@@ -1,0 +1,10 @@
+@startuml
+actor User
+participant "Electronic Bulletin Board" as Board
+
+User -> Board: Place Advertisement
+Board -> Board: Validate Advertisement Data
+Board -> Board: Generate Unique ID
+Board -> Board: Create Advertisement Object
+Board --> User: Advertisement ID
+@enduml
