@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+skinparam actor {
+  BackgroundColor LightBlue
+}
+
+actor User
+actor Admin
+
+rectangle "Bulletin Board System" {
+  User --> (View Ads)
+  User --> (Place Ad)
+  User --> (Contact Seller)
+
+  Admin --> (Manage Ads)
+  Admin --> (Delete Ads)
+  Admin --> (Ban Users)
+
+  (Manage Ads) --> (Create Ad)
+  (Manage Ads) --> (Update Ad)
+  (Manage Ads) --> (Delete Ad)
+}
+
+@enduml

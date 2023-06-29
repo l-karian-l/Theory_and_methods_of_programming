@@ -1,0 +1,22 @@
+@startuml
+actor User
+participant "Bulletin Board System" as BulletinBoard
+participant "Ad Manager" as AdManager
+
+User -> BulletinBoard: View Ads
+BulletinBoard --> User: Ads Displayed
+
+User -> BulletinBoard: Place Ad
+BulletinBoard -> AdManager: Create Ad
+AdManager --> BulletinBoard: Ad Created
+BulletinBoard --> User: Ad Placed
+
+User -> BulletinBoard: Contact Seller
+BulletinBoard --> User: Seller Contact Information
+
+User -> BulletinBoard: Delete Ad
+BulletinBoard -> AdManager: Delete Ad
+AdManager --> BulletinBoard: Ad Deleted
+BulletinBoard --> User: Ad Deleted
+
+@enduml

@@ -1,0 +1,29 @@
+@startuml
+
+class BulletinBoardSystem {
+  +ViewAds()
+  +PlaceAd()
+  +ContactSeller()
+}
+
+class User {
+  +username: String
+  +password: String
+}
+
+class Admin {
+  +username: String
+  +password: String
+}
+
+class AdManager {
+  +CreateAd(adData: AdData)
+  +UpdateAd(adId: String, adData: AdData)
+  +DeleteAd(adId: String)
+}
+
+BulletinBoardSystem "1" *-- "1..*" User
+BulletinBoardSystem "1" *-- "1..*" Admin
+BulletinBoardSystem "1" *-- AdManager
+
+@enduml
